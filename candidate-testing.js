@@ -40,15 +40,15 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
   //if(candidateAnswer.toUpperCase() === correctAnswer.toUpperCase()) {
-    //console.log("Your answer is correct!")
+    //console.log("Your answer is correct!");
   //} else {
-    //console.log("Wrong answer!")
+    //console.log("Wrong answer!");
   //}
-
+//1.2c
   for(let i=0; i<candidateAnswers.length; i++) {
     console.log(`Your answer was ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
   }
-
+//rest of code
   let numberCorrect = 0;
 
   for(let i=0; i<candidateAnswers.length; i++) {
