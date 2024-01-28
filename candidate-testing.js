@@ -31,6 +31,7 @@ function askQuestion() {
   for(let i=0; i<questions.length; i++) {
     candidateAnswers.push(input.question(questions[i]));
   }
+  //candidateAnswer = input.question(question);
 }
 
 
@@ -38,6 +39,12 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
+  //if(candidateAnswer.toUpperCase() === correctAnswer) {
+    //console.log("Your answer is correct!")
+  //} else {
+    //console.log("Wrong answer!")
+  //}
+
   for(let i=0; i<candidateAnswers.length; i++) {
     console.log(`Your answer was ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
   }
