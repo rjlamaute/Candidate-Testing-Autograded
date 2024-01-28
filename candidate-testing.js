@@ -42,11 +42,26 @@ function gradeQuiz(candidateAnswers) {
     console.log(`Your answer was ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
   }
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  let numberCorrect = 0;
 
+  for(let i=0; i<candidateAnswers.length; i++) {
+    if(candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
+        numberCorrect += 1;
+    }
+  }
+
+  let grade = (numberCorrect / questions.length) * 100;  //TODO 3.2 use this variable to calculate the candidates score.
+
+  if(grade >= 80) {
+    console.log(`You passed the quiz with a ${grade}%`);
+    } else {
+    console.log(`Your grade was ${grade}%. You failed the quiz.`);
+    }
 
   return grade;
 }
+
+
 
 function runProgram() {
   askForName();
